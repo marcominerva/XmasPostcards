@@ -1,0 +1,30 @@
+{
+    "version": "1.0",
+    "defaultProvider": "cdnjs",
+    "libraries": [
+        {
+            "library": "twitter-bootstrap@5.3.2",
+            "destination": "wwwroot/lib/bootstrap"
+        },
+        {
+            "library": "bootstrap-icons@1.11.2",
+            "destination": "wwwroot/lib/bootstrap-icons"
+        },
+        {
+            "library": "jquery@3.7.1",
+            "destination": "wwwroot/lib/jquery"
+        },
+        {
+            "library": "alpinejs@3.13.3",
+            "destination": "wwwroot/lib/alpinejs"
+        },
+        {
+            "library": "photoswipe@5.4.2",
+            "destination": "wwwroot/lib/photoswipe"
+        },
+        {
+            "library": "photoswipe-dynamic-caption-plugin@1.2.7",
+            "destination": "wwwroot/lib/photoswipe-dynamic-caption-plugin"
+        }
+    ]
+}

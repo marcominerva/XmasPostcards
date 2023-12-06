@@ -35,6 +35,7 @@ public class PostcardService(OpenAIClient openAIClient, HttpClient dallEClient, 
             new
             {
                 Prompt = description,
+                Size = $"{openAISettings.ImageWidth}x{openAISettings.ImageHeight}"
             });
 
         using var streamResponse = await imageGenerationResponse.Content.ReadAsStreamAsync();
