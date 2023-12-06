@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmasPostcards", "XmasPostcards\XmasPostcards.csproj", "{7FD34A67-C29D-487B-ADB0-15F05E637CE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{81443ECC-D5E9-42D2-B5C2-AEDB767399A3}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FD34A67-C29D-487B-ADB0-15F05E637CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FD34A67-C29D-487B-ADB0-15F05E637CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FD34A67-C29D-487B-ADB0-15F05E637CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FD34A67-C29D-487B-ADB0-15F05E637CE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E3039D6-C458-4F58-8C6E-E7BF59C2C687}
+	EndGlobalSection
+EndGlobal

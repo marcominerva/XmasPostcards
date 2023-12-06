@@ -1,0 +1,6 @@
+@XmasPostcards_HostAddress = http://localhost:5046
+
+GET {{XmasPostcards_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
