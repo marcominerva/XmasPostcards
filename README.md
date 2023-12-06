@@ -1,2 +1,2 @@
-# Xmas Postcards
-Use Artificial Intelligence to create Xmas postcards
+# X-Mas Postcards
+Use Artificial Intelligence to create postcards for X-Mas.
