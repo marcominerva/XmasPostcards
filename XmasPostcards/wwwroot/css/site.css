@@ -68,3 +68,8 @@ input:focus {
         width: 930px;
     }
 }
+
+.bg-red {
+    --bs-bg-opacity: 1;
+    background-color: #c00000 !important;
+}

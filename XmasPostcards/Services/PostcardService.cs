@@ -17,7 +17,7 @@ public class PostcardService(OpenAIClient openAIClient, HttpClient dallEClient, 
             DeploymentName = openAISettings.Model,
             Messages =
             {
-                new(ChatRole.System, "Sei un assistente che genera descrizioni sempre diverse di cartoline da inviare ad amici e parenti."),
+                new(ChatRole.System, "Sei un assistente che genera descrizioni di cartoline da inviare ad amici e parenti."),
                 new(ChatRole.User, """
                     Crea una descrizione casuale per una cartolina di Natale.                     
                     Descrivi i dettagli dell'immagine e parla dei colori usati.

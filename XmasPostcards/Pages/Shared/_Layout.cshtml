@@ -28,11 +28,11 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-red border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-page="/Index">
-                    <img class="d-inline-block align-middle" src="~/favicon-32x32.png" alt="@environment.ApplicationName">
-                    @environment.ApplicationName
+                    <img class="d-inline-block align-middle" src="~/favicon-32x32.png" alt="@environment.ApplicationName" title="Christmas icons created by Freepik - Flaticon">
+                    <div class="text-white d-inline-block align-middle">@environment.ApplicationName</div>
                 </a>
                 <div class="d-inline-flex justify-content-between">
                     @await RenderSectionAsync("RightCommands", required: false)
@@ -47,8 +47,8 @@
         </main>
     </div>
 
-    <footer class="border-top footer">
-        <div class="container text-body-secondary">
+    <footer class="border-top footer bg-secondary">
+        <div class="container text-white">
             <div class="row d-flex flex-wrap justify-content-between align-items-center">
                 <div class="align-items-center col d-flex align-items-center">
                     &copy; @author

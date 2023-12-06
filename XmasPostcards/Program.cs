@@ -72,6 +72,7 @@ builder.Services.AddProblemDetails(options =>
 });
 
 var app = builder.Build();
+app.Services.GetRequiredService<IWebHostEnvironment>().ApplicationName = builder.Configuration.GetValue<string>("SiteName")!;
 
 // Configure the HTTP request pipeline.
 app.UseHttpsRedirection();
