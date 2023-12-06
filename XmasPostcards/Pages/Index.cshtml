@@ -49,7 +49,7 @@
     </div>
 }
 
-<div x-data="photos" @@refresh.window="generatePhoto">
+<div x-data="postcards" @@refresh.window="generatePostcard">
 
     <div class="row" x-cloak x-show="isBusy">
         <div class="col mt-5 text-center">
@@ -59,7 +59,7 @@
         </div>
     </div>
 
-    <div x-cloak class="row" x-init="$nextTick(() => generatePhoto())" x-show="imageUrl != null">
+    <div x-cloak class="row" x-init="$nextTick(() => generatePostcard())" x-show="imageUrl != null">
         <div class="text-center">
             <div class="pswp-gallery" id="gallery--individual">
                 <a x-bind:href="imageUrl" data-pswp-width="@openAISettingsOptions.Value.ImageWidth" data-pswp-height="@openAISettingsOptions.Value.ImageHeight" target="_blank">
@@ -90,7 +90,7 @@
     @{
         <script>
             document.addEventListener("alpine:init", () => {
-                photos('@Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName');
+                postcards('@Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName');
             });
         </script>
     }

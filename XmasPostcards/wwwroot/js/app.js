@@ -1,4 +1,4 @@
-﻿async function generateRandomPhoto(language) {
+﻿async function generateRandomPostcard(language) {
     const response = await fetch('/api/postcard', {
         method: "POST",
         headers: {

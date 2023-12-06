@@ -1,5 +1,5 @@
-﻿function photos(language) {
-    Alpine.data("photos", () => ({
+﻿function postcards(language) {
+    Alpine.data("postcards", () => ({
         language: language,
         isBusy: false,
         errorMessage: null,
@@ -7,7 +7,7 @@
         imageUrl: null,
         description: null,
 
-        generatePhoto: async function () {
+        generatePostcard: async function () {
             if (this.isBusy)
                 return;
 
@@ -17,7 +17,7 @@
             this.isBusy = true;
 
             try {
-                const response = await generateRandomPhoto(language);
+                const response = await generateRandomPostcard(language);
                 const content = await response.json();
 
                 this.isBusy = false;
