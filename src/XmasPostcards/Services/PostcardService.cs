@@ -11,7 +11,7 @@ public class PostcardService(OpenAIClient openAIClient, IOptions<OpenAISettings>
     public async Task<Postcard> GenerateAsync()
     {
         // L'immagine può contenere ad esempio un paesaggio sotto la neve, un presepe, renne, un albero di Natale, pupazzi di neve, persone festose, bambini che giocano. Non è necessario che nella cartolina sia presenti tutti questi soggetti. Non è obbligatorio che nella cartolina ci sia un albero di Natale.
-        var chatGptResponse = await openAIClient.GetChatCompletionsAsync(new()
+        var descriptionResponse = await openAIClient.GetChatCompletionsAsync(new()
         {
             DeploymentName = openAISettings.Model,
             Messages =
@@ -29,16 +29,16 @@ public class PostcardService(OpenAIClient openAIClient, IOptions<OpenAISettings>
             MaxTokens = 800
         });
 
-        var description = chatGptResponse.Value.Choices[0].Message.Content;
+        var description = descriptionResponse.Value.Choices[0].Message.Content;
 
-        var imageGeneration = await openAIClient.GetImageGenerationsAsync(new()
+        var imageGenerationResponse = await openAIClient.GetImageGenerationsAsync(new()
         {
             DeploymentName = openAISettings.DallEModel,
             Prompt = description,
             Size = $"{openAISettings.ImageWidth}x{openAISettings.ImageHeight}"
         });
 
-        var imageUrl = imageGeneration.Value.Data[0].Url.ToString();
+        var imageUrl = imageGenerationResponse.Value.Data[0].Url.ToString();
         return new Postcard(imageUrl, description);
     }
 }

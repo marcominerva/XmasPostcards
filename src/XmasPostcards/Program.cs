@@ -1,6 +1,5 @@
 using System.Diagnostics;
 using System.Threading.RateLimiting;
-using Azure;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Azure;
 using TinyHelpers.AspNetCore.Extensions;
@@ -22,10 +21,7 @@ var openAISettings = builder.Services.ConfigureAndGet<OpenAISettings>(builder.Co
 
 builder.Services.AddAzureClients(clientBuilder =>
 {
-    clientBuilder.AddOpenAIClient(
-        new Uri(openAISettings.Endpoint),
-        new AzureKeyCredential(openAISettings.Credential)
-    );
+    clientBuilder.AddOpenAIClient(new(openAISettings.Endpoint), new(openAISettings.Credential));
 });
 
 builder.Services.AddScoped<PostcardService>();
