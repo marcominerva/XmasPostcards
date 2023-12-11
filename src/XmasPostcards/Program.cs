@@ -28,11 +28,7 @@ builder.Services.AddAzureClients(clientBuilder =>
     );
 });
 
-builder.Services.AddHttpClient<PostcardService>(client =>
-{
-    client.BaseAddress = new Uri(openAISettings.Endpoint);
-    client.DefaultRequestHeaders.TryAddWithoutValidation("Api-Key", openAISettings.Credential);
-});
+builder.Services.AddScoped<PostcardService>();
 
 builder.Services.AddRateLimiter(options =>
 {
