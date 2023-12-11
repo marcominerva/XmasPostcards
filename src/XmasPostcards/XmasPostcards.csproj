@@ -9,8 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.9" />
-        <PackageReference Include="LigerShark.WebOptimizer.Core" Version="3.0.391" />
+        <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.11" />
+        <PackageReference Include="LigerShark.WebOptimizer.Core" Version="3.0.396" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Azure" Version="1.7.1" />
         <PackageReference Include="TinyHelpers.AspNetCore" Version="3.0.2" />
